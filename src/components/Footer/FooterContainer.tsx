@@ -1,8 +1,5 @@
 'use client';
-
-import {useState} from "react";
-import Link from "next/link";
-import Image from "next/image";
+import { useState, useEffect } from 'react';
 import { usePathname } from 'next/navigation';
 import { Link as NavLink, navigationLinks, socialLinks } from '@/config/nav';
 
@@ -11,6 +8,7 @@ import { Link as NavLink, navigationLinks, socialLinks } from '@/config/nav';
 export default function FooterContainer() {
     const pathname = usePathname();
     const currentYear = new Date().getFullYear();
+    const [showScrollButton, setShowScrollButton] = useState(false);
 
     const isActivePath = (path: string) => {
         if (path === "/" && pathname === "/") return true;
@@ -18,9 +16,27 @@ export default function FooterContainer() {
         return false;
     };
 
-    return (
-        <footer className="w-full bg-orange-50 py-20 relative">
+    useEffect(() => {
+        const handleScroll = () => {
+            // Show button when user scrolls down 200px (you can adjust this value)
+            const shouldShow = window.scrollY > 200;
+            setShowScrollButton(shouldShow);
+        };
 
+        window.addEventListener('scroll', handleScroll);
+
+        // Clean up the event listener
+        return () => {
+            window.removeEventListener('scroll', handleScroll);
+        };
+    }, []);
+
+    const scrollToTop = () => {
+        window.scrollTo({ top: 0, behavior: 'smooth' });
+    };
+
+    return (
+        <footer className="w-full bg-orange-50 py-20 relative overflow-hidden">
             <div className="absolute top-[-10px]" data-negative="false">
                 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 6480 68" preserveAspectRatio="none" height={52}
                      className="w-auto">
@@ -100,8 +116,10 @@ export default function FooterContainer() {
 
                 {/* Scroll to Top Button */}
                 <button
-                    onClick={() => window.scrollTo({top: 0, behavior: 'smooth'})}
-                    className="fixed bottom-4 right-4 bg-orange-300 text-white rounded-full p-3 hover:bg-orange-400 transition-colors"
+                    onClick={scrollToTop}
+                    className={`fixed bottom-4 right-4 bg-orange-300 text-white rounded-full p-3 hover:bg-orange-400 
+transition-all duration-300 ease-in-out transform hover:scale-110
+${showScrollButton ? 'opacity-100' : 'opacity-0 pointer-events-none'}`}
                     aria-label="Scroll to top"
                 >
                     <i className="fas fa-arrow-up"></i>
