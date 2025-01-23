@@ -15,6 +15,8 @@ const geistMono = Geist_Mono({
   subsets: ["latin"],
 });
 
+//ts-ignore - Capriola is not a module
+//eslint-disable-next-line @typescript-eslint/ban-ts-comment
 const capriola = Capriola({
     weight: '400',
     variable: '--font-headers',
