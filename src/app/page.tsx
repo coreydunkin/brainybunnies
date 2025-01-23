@@ -2,13 +2,14 @@ import Image from "next/image";
 import HeaderContainer from "@/components/Header/HeaderContainer";
 import FooterContainer from "@/components/Footer/FooterContainer";
 import {socialLinks} from "@/config/nav";
+import Gallery from "@/components/Gallery/Gallery";
 
 export default function Home() {
   return (
       <>
         <div
-            className="grid p-8 pb-20 sm:p-20 sm:pt-10 font-[family-name:var(--font-geist-sans)] bg-[url('/img/slider-01-bg-2.png')] bg-center bg-no-repeat">
-          <main className="flex flex-col gap-8 row-start-2 items-center sm:items-start">
+            className="grid pb-20 xs:p-20 sm:pt-10 font-[family-name:var(--font-geist-sans)] bg-[url('/img/slider-01-bg-2.png')] bg-center bg-no-repeat">
+          <div className="flex flex-col gap-8 row-start-2 items-center sm:items-start">
             <div className="mx-auto ">
               <div className="flex flex-col md:flex-row items-center justify-between gap-12">
 
@@ -74,7 +75,7 @@ export default function Home() {
                 </div>
 
                 {/* Right Image */}
-                <div className="w-full md:block sm:hidden md:w-2/5 md:pl-12">
+                <div className="w-full hidden md:block md:w-2/5 md:pl-12">
                   <div className="relative">
                     <div className="bg-purple-100 drop-shadow-[20px_20px_0px_#e5d4ff] rounded-[60px] max-h-[600px] overflow-hidden">
                       <Image
@@ -90,7 +91,9 @@ export default function Home() {
 
               </div>
             </div>
-          </main>
+          </div>
+
+          {/*<Gallery />*/}
         </div>
       </>
   );
