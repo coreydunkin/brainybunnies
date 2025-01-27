@@ -1,6 +1,4 @@
 import Image from "next/image";
-import HeaderContainer from "@/components/Header/HeaderContainer";
-import FooterContainer from "@/components/Footer/FooterContainer";
 import {socialLinks} from "@/config/nav";
 import Gallery from "@/components/Gallery/Gallery";
 import ExperienceChecklist from "@/components/Checklist/Checklist";

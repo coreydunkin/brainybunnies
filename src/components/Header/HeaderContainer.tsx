@@ -106,7 +106,7 @@ export default function HeaderContainer() {
             </header>
 
             {/* Main navigation */}
-            <nav className="bg-white shadow-sm sticky top-0 z-50">
+            <nav className="bg-white shadow-md sticky top-0 z-50">
                 <div className="container mx-auto px-4">
                     <div className="flex justify-between items-center py-4 ">
                         {/* Logo */}

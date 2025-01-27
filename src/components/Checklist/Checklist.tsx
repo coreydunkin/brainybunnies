@@ -12,7 +12,7 @@ export default function ExperienceChecklist() {
                 {items.map((item, index) => (
                     <div key={index} className="flex items-center gap-3">
                         <div className="w-6 h-6 rounded-full bg-orange-100 flex items-center justify-center p-4">
-                            <i aria-hidden="true" className="fas fa-check"/>
+                            <i aria-hidden="true" className="fas fa-check text-orange-500"/>
                         </div>
                         <span className="text-orange-400 font-medium">{item}</span>
                     </div>
