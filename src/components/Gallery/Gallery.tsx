@@ -10,6 +10,17 @@ const STORAGE_KEY = 'instagram_posts';
 const EXPIRY_KEY = 'instagram_expiry';
 const EXPIRY_DAYS = 14;
 
+interface InstagramPost {
+    post: Post;
+}
+
+interface Post {
+    id: string;
+    caption: string;
+    media_url: string;
+    postUrl: string;
+}
+
 export default function Gallery() {
     const [posts, setPosts] = useState([]);
     const [loading, setLoading] = useState(true);
@@ -58,7 +69,7 @@ export default function Gallery() {
 
 
 
-    const InstagramPost = ({ post }) => (
+    const InstagramPost = ({ post }: InstagramPost) => (
         <Link
             href={post.postUrl}
             target="_blank"
@@ -115,7 +126,7 @@ export default function Gallery() {
                         }
                     }}
                 >
-                    {posts.map((post) => (
+                    {posts.map((post: Post) => (
                         <SwiperSlide key={post.id}>
                             <InstagramPost post={post}/>
                         </SwiperSlide>
@@ -123,7 +134,7 @@ export default function Gallery() {
                 </Swiper>
             </div>
             <div className="hidden sm:grid grid-cols-3 gap-4 max-w-3xl mx-auto">
-                {posts.map((post) => (
+                {posts.map((post: Post) => (
                     <InstagramPost key={post.id} post={post}/>
                 ))}
             </div>
