@@ -5,6 +5,7 @@ import Link from "next/link";
 import Image from "next/image";
 import { usePathname } from 'next/navigation';
 import { Link as NavLink, navigationLinks, socialLinks } from '@/config/nav';
+import Wave from "@/components/Wave/Wave";
 
 
 
@@ -38,28 +39,7 @@ export default function HeaderContainer() {
                             ))}
                         </div>
                     </div>
-                    <div className="rotate-180" data-negative="false">
-                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 6480 68" preserveAspectRatio="none"
-                             height={52} className="w-auto">
-                            <path className="elementor-shape-fill" d="M3599.8,0h-1920v68c0,0,70.8-38,120-38s70.8,38,120,38s70.8-38,120-38c49.2,0,70.8,38,120,38s70.8-38,120-38s70.8,38,120,38
-	s70.8-38,120-38s70.8,38,120,38s70.8-38,120-38s70.8,38,120,38s70.8-38,120-38s70.8,38,120,38s70.8-38,120-38s70.8,38,120,38
-	s70.8-38,120-38s120,38,120,38V0z" fill="#fff"></path>
-                            <path className="elementor-shape-fill" d="M3599.8,0h-1920v68c0,0,70.8-38,120-38s70.8,38,120,38s70.8-38,120-38c49.2,0,70.8,38,120,38s70.8-38,120-38s70.8,38,120,38
-	s70.8-38,120-38s70.8,38,120,38s70.8-38,120-38s70.8,38,120,38s70.8-38,120-38s70.8,38,120,38s70.8-38,120-38s70.8,38,120,38
-	s70.8-38,120-38s120,38,120,38V0z" fill="#fff"></path>
-                            <path className="elementor-shape-fill" d="M5280.3,0h-1920v68c0,0,70.8-38,120-38s70.8,38,120,38s70.8-38,120-38s70.8,38,120,38s70.8-38,120-38s70.8,38,120,38
-	c49.2,0,70.8-38,120-38c49.2,0,70.8,38,120,38c49.2,0,70.8-38,120-38c49.2,0,70.8,38,120,38c49.2,0,70.8-38,120-38
-	c49.2,0,70.8,38,120,38c49.2,0,70.8-38,120-38c49.2,0,70.8,38,120,38c49.2,0,70.8-38,120-38c49.2,0,120,38,120,38V0z"
-                                  fill="#fff"></path>
-                            <path className="elementor-shape-fill" d="M6480.3-0.4h-1920v68c0,0,70.8-38,120-38c49.2,0,70.8,38,120,38c49.2,0,70.8-38,120-38c49.2,0,70.8,38,120,38
-	c49.2,0,70.8-38,120-38c49.2,0,70.8,38,120,38c49.2,0,70.8-38,120-38c49.2,0,70.8,38,120,38c49.2,0,70.8-38,120-38
-	c49.2,0,70.8,38,120,38s70.8-38,120-38s70.8,38,120,38s70.8-38,120-38s70.8,38,120,38s70.8-38,120-38s120,38,120,38V-0.4z"
-                                  fill="#fff"></path>
-                            <path className="elementor-shape-fill" d="M1920,0H0v68c0,0,70.8-38,120-38s70.8,38,120,38s70.8-38,120-38s70.8,38,120,38s70.8-38,120-38s70.8,38,120,38
-	s70.8-38,120-38s70.8,38,120,38s70.8-38,120-38s70.8,38,120,38s70.8-38,120-38s70.8,38,120,38s70.8-38,120-38s70.8,38,120,38
-	s70.8-38,120-38s120,38,120,38V0z" fill="#fff"></path>
-                        </svg>
-                    </div>
+                    <Wave rotate={true}/>
                 </div>
 
                 {/* Mobile Menu */}
@@ -106,7 +86,7 @@ export default function HeaderContainer() {
             </header>
 
             {/* Main navigation */}
-            <nav className="bg-white shadow-sm sticky top-0 z-50">
+            <nav className="bg-white shadow-md sticky top-0 z-50">
                 <div className="container mx-auto px-4">
                     <div className="flex justify-between items-center py-4 ">
                         {/* Logo */}
