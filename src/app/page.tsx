@@ -1,7 +1,7 @@
 import Image from "next/image";
 import {socialLinks} from "@/config/nav";
 import Gallery from "@/components/Gallery/Gallery";
-import ExperienceChecklist from "@/components/Checklist/Checklist";
+import ExperienceChecklist from "@/components/Checklist/ExperienceChecklist";
 
 
 export default async function Home() {

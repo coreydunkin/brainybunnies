@@ -1,7 +1,8 @@
 import Image from "next/image";
-import ExperienceChecklist from "@/components/Checklist/Checklist";
+import ExperienceChecklist from "@/components/Checklist/ExperienceChecklist";
 import {socialLinks} from "@/config/nav";
 import Gallery from "@/components/Gallery/Gallery";
+import PracticalChecklist from "@/components/Checklist/PracticalChecklist";
 
 export default async function CurriculumGap() {
 
@@ -91,17 +92,18 @@ export default async function CurriculumGap() {
                             </div>
 
                         </div>
-                        <div className="py-10">
+                        <div className="pt-20">
 
                             <h3 className="text-orange-500 font-subheaders uppercase text-lg text-center tracking-widest">The
                                 current</h3>
-                            <h2 className="text-center text-orange-500 font-headers text-6xl">Curriculums</h2>
+                            <h2 className="text-center text-orange-500 font-headers text-4xl md:text-6xl">Curriculums</h2>
 
-                            <div className="flex flex-col md:flex-row items-top justify-between gap-12  text-neutral-600 font-light leading-relaxed  py-10">
+                            <div
+                                className="flex flex-col md:flex-row items-top justify-between gap-12  text-neutral-600 font-light leading-relaxed text-lg  py-10">
                                 <div className="w-full md:w-1/2 space-y-8">
                                     <h3 className="text-orange-500 text-3xl text-center font-headers">Early Years
                                         Learning Framework</h3>
-                                    <p><strong>(Preschool)</strong> 5 Learning Outcomes</p>
+                                    <p><strong className="font-bold italic">(Preschool)</strong> 5 Learning Outcomes</p>
                                     <ol className="list-decimal pl-5">
                                         <li><span>Children have a strong sense of identity.</span>
                                         </li>
@@ -126,25 +128,28 @@ export default async function CurriculumGap() {
                                 <div className="w-full md:w-1/2 space-y-8">
                                     <h3 className="text-orange-500 text-3xl text-center font-headers">Early Stage 1
                                         Curriculum</h3>
-                                    <p><strong>(Kindergarten)</strong> English Outcomes only</p>
+                                    <p><span className="font-bold italic">(Kindergarten)</span> English Outcomes only
+                                    </p>
                                     <ol className="list-decimal pl-5">
-                                        <li><span><strong>Oral Language and Communication:</strong> Communicates using interpersonal conventions and language.</span>
+                                        <li><span><strong
+                                            className="font-bold">Oral Language and Communication:</strong> Communicates using interpersonal conventions and language.</span>
                                         </li>
-                                        <li><span><strong>Vocabulary:</strong> Understands and effectively uses Tier 1 and 2 words.</span>
+                                        <li><span><strong className="font-bold">Vocabulary:</strong> Understands and effectively uses Tier 1 and 2 words.</span>
                                         </li>
-                                        <li><span><strong>Phonological Awareness:</strong> Identifies, blends, segments and manipulates phonological units in spoken words.</span>
+                                        <li><span><strong className="font-bold">Phonological Awareness:</strong> Identifies, blends, segments and manipulates phonological units in spoken words.</span>
                                         </li>
-                                        <li><span><strong>Print Conventions:</strong> Reads and writes from left to right, from top to bottom and identifies features of print.&nbsp;</span>
+                                        <li><span><strong className="font-bold">Print Conventions:</strong> Reads and writes from left to right, from top to bottom and identifies features of print.&nbsp;</span>
                                         </li>
-                                        <li><span><strong>Phonic Knowledge:</strong> Uses letter-sound relationships and simple digraphs to sound out and spell words.</span>
+                                        <li><span><strong className="font-bold">Phonic Knowledge:</strong> Uses letter-sound relationships and simple digraphs to sound out and spell words.</span>
                                         </li>
-                                        <li><span><strong>Reading Fluency:</strong> Reads decodable texts aloud with fluency.</span>
+                                        <li><span><strong className="font-bold">Reading Fluency:</strong> Reads decodable texts aloud with fluency.</span>
                                         </li>
-                                        <li><span><strong>Reading Comprehension:</strong> Comprehends independently read texts.</span>
+                                        <li><span><strong className="font-bold">Reading Comprehension:</strong> Comprehends independently read texts.</span>
                                         </li>
-                                        <li><span><strong>Creating Written Texts:</strong> Writes sentences with at least 2 related ideas and correct simple sentences.</span>
+                                        <li><span><strong className="font-bold">Creating Written Texts:</strong> Writes sentences with at least 2 related ideas and correct simple sentences.</span>
                                         </li>
-                                        <li><strong>Spelling</strong>: Spells words by sounding out and
+                                        <li><strong className="font-bold">Spelling:</strong> Spells words by sounding
+                                            out and
                                             spells familiar high-frequency words whilst writing.
                                         </li>
                                         <li><span><strong>Handwriting:</strong> Forms all lower-case and upper-case letters.</span>
@@ -163,6 +168,60 @@ export default async function CurriculumGap() {
                             </div>
                         </div>
 
+                        <div className="flex flex-col md:flex-row items-topjustify-between gap-12 pt-20">
+
+                            {/* Left Content */}
+                            <div className="w-full md:w-5/12 space-y-8">
+
+
+                                {/* Mobile Image */}
+                                <div className="w-100 ml-10 mr-10 md:hidden sm:block">
+                                    <div className="relative">
+                                        <div
+                                            className="bg-purple-100 drop-shadow-[10px_10px_0px_#e5d4ff] rounded-[60px] max-h-[500px] overflow-hidden">
+                                            <Image
+                                                width={1536}
+                                                height={1536}
+                                                src="/img/practical-skills.jpg"
+                                                alt="Practical skills hero"
+                                                className="object-contain object-bottom"
+                                            />
+                                        </div>
+                                    </div>
+                                </div>
+
+                                {/* Welcome Text */}
+                                <div className="space-y-4">
+                                    <p className="text-orange-400 uppercase font-subheaders tracking-wider text-xl">Independence:</p>
+                                    <h1 className="text-4xl md:text-5xl font-headers text-orange-500">Practical Skills</h1>
+                                </div>
+
+                                {/* Description Paragraphs */}
+                                <div className="space-y-6 text-neutral-600 font-light leading-relaxed">
+                                    <PracticalChecklist/>
+                                </div>
+                            </div>
+
+                            {/* Right Image */}
+                            <div
+                                className="w-full hidden md:block md:w-6/12 md:pl-16 md:mr-32 sm:mr-0 sm:pl-0 min-[768px]:pl-0 min-[768px]:mr-0 min-[1024px]:pl-16 min-[1024px]:mr-32">
+                                <div className="relative">
+                                    <div
+                                        className="bg-purple-100 drop-shadow-[20px_20px_0px_#e5d4ff] rounded-[60px] max-h-[600px] overflow-hidden">
+                                        <Image
+                                            width={768}
+                                            height={1152}
+                                            src="/img/practical-skills.jpg"
+                                            alt="Practical skills hero"
+                                            className="object-center object-bottom"
+                                        />
+                                    </div>
+                                </div>
+                                <p className="pt-10 text-3xl text-center font-headers text-orange-500">We will teach your child these skills, so that they will glide through Kindergarten confidently!</p>
+
+                            </div>
+
+                        </div>
                     </div>
 
                 </div>
