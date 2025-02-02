@@ -26,13 +26,13 @@ export default async function PricesAndEnquiries() {
                                 <div className="w-100 ml-10 mr-10 md:hidden sm:block">
                                     <div className="relative">
                                         <div
-                                            className="bg-purple-100 drop-shadow-[10px_10px_0px_#e5d4ff] rounded-[60px] max-h-[500px] overflow-hidden">
+                                            className="bg-purple-100 drop-shadow-[10px_10px_0px_#e5d4ff] rounded-[60px] max-h-[500px]">
                                             <Image
                                                 width={1536}
                                                 height={1536}
                                                 src="/img/prices-hero.jpg"
                                                 alt="Priceshero"
-                                                className="object-contain object-bottom"
+                                                className="object-contain object-bottom rounded-[60px]"
                                             />
                                         </div>
                                     </div>
@@ -83,11 +83,11 @@ export default async function PricesAndEnquiries() {
                             </div>
 
                         </div>
-                        <div className="pt-20">
+                        <div className="pt-0 sm:pt-20">
                             <div
                                 className="flex flex-col md:flex-row items-top justify-between gap-12  text-neutral-600 font-light leading-relaxed text-lg  py-10">
                                 <div className="w-full md:w-1/2 space-y-8">
-                                    <h3 className="text-orange-500 text-3xl text-center font-headers">Prices </h3>
+                                    <h3 className="text-orange-500 text-3xl text-left sm:text-center font-headers">Prices </h3>
                                     <ul className="list-disc pl-5">
                                         <li><span className="font-medium">Kindergarten to Year 2 Tuition:</span> Flexible - <span className="font-medium text-orange-500">$100 for 1 hour</span> or <span className="font-medium text-orange-500">$145 for 1.5 hours</span> (duration per child is flexible, i.e. older sibling may have longer lesson than younger sibling if required etc)
                                         </li>
@@ -99,15 +99,15 @@ export default async function PricesAndEnquiries() {
                                         </li>
                                     </ul>
                                     <Image
-                                        width={199}
-                                        height={300}
-                                        src="/img/stage-1.png"
-                                        alt="Stage 1 hero"
-                                        className="mx-auto pt-10 block"
+                                        width={300}
+                                        height={166}
+                                        src="/img/counters_01-300x166.png"
+                                        alt="Prices hero"
+                                        className="mx-auto pt-0 block max-w-40 sm:pt-10 sm:max-w-full"
                                     />
                                 </div>
                                 <div className="w-full md:w-1/2 space-y-8">
-                                    <h3 className="text-orange-500 text-3xl text-center font-headers">Enquires</h3>
+                                    <h3 className="text-orange-500 text-3xl text-left sm:text-center font-headers">Enquires</h3>
                                     <p>Please contact us via email or DM us on Instagram for all enquiries:</p>
                                     <ul>
                                         {socialLinks.toReversed().map((link) => (
@@ -126,6 +126,7 @@ export default async function PricesAndEnquiries() {
 
                                         ))}
                                     </ul>
+                                    <p>Ensure you give us a little information about your child in your initial enquiry so we can assist as promptly as possible. For example: your child’s name, age, learning focus, your suburb (lesson location within Sutherland Shire or close to), days/times you are interested in.</p>
                                     <Image
                                         width={199}
                                         height={300}

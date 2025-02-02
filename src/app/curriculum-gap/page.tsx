@@ -25,13 +25,13 @@ export default async function CurriculumGap() {
                                 <div className="w-100 ml-10 mr-10 md:hidden sm:block">
                                     <div className="relative">
                                         <div
-                                            className="bg-purple-100 drop-shadow-[10px_10px_0px_#e5d4ff] rounded-[60px] max-h-[500px] overflow-hidden">
+                                            className="bg-purple-100 drop-shadow-[10px_10px_0px_#e5d4ff] rounded-[60px] max-h-[500px]">
                                             <Image
                                                 width={1536}
                                                 height={1536}
                                                 src="/img/curriculum-gap-hero.jpg"
                                                 alt="Curriculum gap hero"
-                                                className="object-contain object-bottom"
+                                                className="object-contain object-bottom rounded-[60px]"
                                             />
                                         </div>
                                     </div>
@@ -92,7 +92,7 @@ export default async function CurriculumGap() {
                             </div>
 
                         </div>
-                        <div className="pt-20">
+                        <div className="pt-10 sm:pt-20">
 
                             <h3 className="text-orange-500 font-subheaders uppercase text-lg text-center tracking-widest">The
                                 current</h3>
@@ -178,13 +178,13 @@ export default async function CurriculumGap() {
                                 <div className="w-100 ml-10 mr-10 md:hidden sm:block">
                                     <div className="relative">
                                         <div
-                                            className="bg-purple-100 drop-shadow-[10px_10px_0px_#e5d4ff] rounded-[60px] max-h-[500px] overflow-hidden">
+                                            className="bg-purple-100 drop-shadow-[10px_10px_0px_#e5d4ff] rounded-[60px] max-h-[500px]">
                                             <Image
                                                 width={1536}
                                                 height={1536}
                                                 src="/img/practical-skills.jpg"
                                                 alt="Practical skills hero"
-                                                className="object-contain object-bottom"
+                                                className="object-contain object-bottom rounded-[60px]"
                                             />
                                         </div>
                                     </div>

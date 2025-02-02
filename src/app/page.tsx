@@ -24,13 +24,13 @@ export default async function Home() {
                   <div className="w-100 ml-10 mr-10 md:hidden sm:block">
                     <div className="relative">
                       <div
-                          className="bg-purple-100 drop-shadow-[10px_10px_0px_#e5d4ff] rounded-[60px] max-h-[500px] overflow-hidden">
+                          className="bg-purple-100 drop-shadow-[10px_10px_0px_#e5d4ff] rounded-[60px] max-h-[500px]">
                         <Image
                             width={1536}
                             height={1536}
                             src="/img/hero-mobile.jpg"
                             alt="Teacher reading to children"
-                            className="object-contain object-bottom"
+                            className="object-contain object-bottom rounded-[60px]"
                         />
                       </div>
                     </div>

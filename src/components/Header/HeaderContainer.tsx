@@ -68,12 +68,12 @@ export default function HeaderContainer() {
                                     </svg>
                                 </button>
                             </div>
-                            <div className="mt-8">
+                            <div className="mt-10">
                                 {navigationLinks.map((link) => (
                                     <Link
                                         key={link.id}
                                         href={link.href}
-                                        className="block text-white text-xl py-2"
+                                        className="block text-white border-b-orange-400 border-b-2 text-2xl py-4 pl-4 font-headers"
                                         onClick={() => setIsMenuOpen(false)}
                                     >
                                         {link.name}

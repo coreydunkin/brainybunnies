@@ -99,24 +99,28 @@ export default function Gallery() {
                 width={234}
                 onError={handleImageError}
             />
-            <div className="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity">
-                <div className="bg-orange-500/90 rounded-full pt-3.5 pb-3 px-4">
-                    <i className="fab fa-instagram text-3xl text-white"></i>
+            <div className="hidden sm:block">
+                <div
+                    className="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity">
+                    <div className="bg-orange-500/90 rounded-full pt-3.5 pb-3 px-4">
+                        <i className="fab fa-instagram text-3xl text-white"></i>
+                    </div>
                 </div>
-            </div>
-            <div className="absolute bottom-0 left-0 right-0 bg-orange-500/80 p-1">
-                <p className="text-white text-sm truncate">
-                    {post.caption?.slice(0, 12)}
-                    {post.caption?.length > 12 && '... '}
-                    <span className="font-semibold">view post</span>
-                </p>
+                <div className="absolute bottom-0 left-0 right-0 bg-orange-500/80 p-1">
+                    <p className="text-white text-sm truncate">
+                        {post.caption?.slice(0, 12)}
+                        {post.caption?.length > 12 && '... '}
+                        <span className="font-semibold">view post</span>
+                    </p>
+                </div>
             </div>
         </Link>
     );
 
     return (
         <>
-            <div className="sm:hidden max-[349px]:hidden max-w-[500px] min-[350px]:max-w-[300px] min-[430px]:max-w-[350px] overflow-hidden mx-auto">
+            <div
+                className="sm:hidden max-[349px]:hidden max-w-[500px] min-[350px]:max-w-[300px] min-[430px]:max-w-[350px] overflow-hidden mx-auto">
                 <Swiper
                     slidesPerView={3}
                     spaceBetween={30}
