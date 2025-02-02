@@ -3,6 +3,7 @@ export interface Link {
     name: string;
     icon?: string;
     href: string;
+    alt?: string;
 }
 
 export const socialLinks: Link[] = [
@@ -11,12 +12,14 @@ export const socialLinks: Link[] = [
         name: "Instagram",
         icon: "fab fa-instagram",
         href: "https://www.instagram.com/brainybunnies/",
+        alt: "@brainybunnies"
     },
     {
         id: 2,
         name: "Email",
         icon: "fas fa-envelope",
-        href: "mailto:admin@brainybunnies.com.au",
+        href: "mailto:brainybunnieseducation@gmail.com",
+        alt: "brainybunnieseducation@gmail.com"
     },
 ];
 
