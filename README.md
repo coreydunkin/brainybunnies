@@ -13,8 +13,8 @@ Brainy Bunnies provides personalized early childhood education services, includi
 ## Tech Stack
 
 - **Framework**: Next.js
-- **Styling**: [Your styling solution - e.g., Tailwind CSS, styled-components]
-- **Deployment**: [Your deployment platform - e.g., Vercel, Netlify]
+- **Styling**: Tailwind CSS
+- **Deployment**: Vercel
 - **Future Integration**: Contentful CMS
 
 ## Project Structure
@@ -121,10 +121,7 @@ The website implements SEO best practices including:
 ## Support
 
 For technical support or content updates, contact:
-[Your contact information or support process]
+corey.dunkin@gmail.com
 
-## License
-
-[Include appropriate license information]
 
 ---
