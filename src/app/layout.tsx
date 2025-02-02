@@ -73,6 +73,7 @@ export default function RootLayout({
           <meta name="tec-api-version" content="v1"/>
           <meta name="tec-api-origin" content="https://brainybunnies.com.au"/>
           <link rel="alternate" href="https://brainybunnies.com.au/wp-json/tribe/events/v1/"/>
+          <link rel="icon" href="/favicon.ico" sizes="any"/>
       </head>
       <body
           className={`${geistSans.variable} ${geistMono.variable} antialiased`}
