@@ -4,6 +4,7 @@ import "./globals.css";
 import { Capriola, Love_Ya_Like_A_Sister } from "next/font/google";
 import HeaderContainer from "@/components/Header/HeaderContainer";
 import FooterContainer from "@/components/Footer/FooterContainer";
+import { Analytics } from "@vercel/analytics/react"
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -81,6 +82,7 @@ export default function RootLayout({
       <HeaderContainer />
         <main className="container mx-auto px-8 mt-8">{children}</main>
       <FooterContainer />
+      <Analytics />
       </body>
       </html>
   );
